@@ -16,72 +16,47 @@ Lashify's scope includes developing a comprehensive system that covers all key a
 ### Customer Reception
 
 Description: This process involves the reception of customers, their registration, and initial assessment of their requirements.
+![Customer reception](https://github.com/tomassar/Lashify/assets/71415654/b0147737-fd4e-412e-96e4-a6d768d22b0c)
 
 ### Resource Management
 
 Description: This process checks the availability of materials required for the lash lifting procedure and ensures they are adequately stocked.
+![Resource management](https://github.com/tomassar/Lashify/assets/71415654/46229a24-13cf-4de1-b7cb-72fcbedf17a0)
 
 ### Appointment Scheduling
 
 Description: This process enables the scheduling of lash lifting appointments based on customer preferences and stylist availability.
+![Schedule appointment](https://github.com/tomassar/Lashify/assets/71415654/e0b37582-75ef-4da1-ba6b-3676aef63943)
 
 ### Stylist Assignment
 
 Description: This process assigns a stylist to each scheduled lash lifting appointment, considering their expertise and workload.
+![Stylist assignment](https://github.com/tomassar/Lashify/assets/71415654/3eb86e5c-2394-437f-a8f6-d07d2ffd638f)
 
 ### Anamnesis
 
 Description: This process involves gathering relevant information about the customer's medical history, allergies, and preferences prior to the lash lifting procedure.
+![Anamnesis](https://github.com/tomassar/Lashify/assets/71415654/7b6ed057-0be0-4062-a8d6-c00c5c664131)
 
 ### Lash Lifting
 
 Description: This process encompasses the actual lash lifting procedure, including the application of lash products and following appropriate techniques.
-
-### Record procedure
-
-Description: This process involves documenting and keeping a record of the lash lifting procedure performed on the client. It includes capturing relevant details such as the specific techniques used, products applied, duration of the procedure, and any additional notes or observations. The records serve as a reference for future treatments and enable the lash technician to track the client's history, preferences, and progress. 
+![Lash Lifting](https://github.com/tomassar/Lashify/assets/71415654/4a425bbd-1e5d-49e3-9a79-e9ad45e36ced)
 
 ### Payment
 
 Description: This process handles the payment transaction for the lash lifting service provided to the customer.
+![Payment](https://github.com/tomassar/Lashify/assets/71415654/9da6e592-614d-40db-a863-74a26c2c7193)
 
-## Level 2 - Process View
-Inputs:
+### Record procedure
 
-    Customer information
-    Resource availability status
-    Appointment details
-    Stylist information
-    Customer anamnesis data
-    Payment details
+Description: This process involves documenting and keeping a record of the lash lifting procedure performed on the client. It includes capturing relevant details such as the specific techniques used, products applied, duration of the procedure, and any additional notes or observations. The records serve as a reference for future treatments and enable the lash technician to track the client's history, preferences, and progress. 
+![Record procedure](https://github.com/tomassar/Lashify/assets/71415654/a6400f80-9fbb-4fc6-8d28-1c0ed0baede1)
 
-Outputs:
+### Customer tracking
 
-    Registered customer profiles
-    Updated resource availability status
-    Scheduled appointment confirmation
-    Assigned stylist information
-    Anamnesis records
-    Payment receipts
-
-Data Stores:
-
-    Customer database
-    Resource inventory
-    Appointment schedule
-    Stylist database
-    Anamnesis records database
-    Payment records database
-
-Systems/Modules:
-
-    Customer Reception Module
-    Resource Management Module
-    Appointment Scheduling Module
-    Stylist Assignment Module
-    Anamnesis Module
-    Lash Lifting Module
-    Payment Module
+Description: In this process, the customer is requested to give feedback through answering a form. Also, the stylist gives post lash-lifting instruccions to the client. Special instruccions and considerations are also important. Finally, images of the client happy after the whole process are uploaded to social media, altogether with the feedback they gave.
+![Customer tracking](https://github.com/tomassar/Lashify/assets/71415654/3822aed5-451f-4250-a463-684d98992b87)
 
 ## Conclusion
 
