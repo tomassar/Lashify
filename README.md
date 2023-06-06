@@ -74,31 +74,49 @@ Lashify's scope includes developing a comprehensive system that covers all key a
 
 ### Anamnesis
 
-Description: This process involves gathering relevant information about the customer's medical history, allergies, and preferences prior to the lash lifting procedure.
+- Input: Stylist assigned, Client arrived
+- Output: Anemnesis succesful
+- Description: This process involves gathering relevant information about the customer's medical history, allergies, and preferences prior to the lash lifting procedure.
+- Documents: Anemnesis history record, anamnesis analysis documentation
 
 ![Anamnesis](https://github.com/tomassar/Lashify/assets/71415654/7b6ed057-0be0-4062-a8d6-c00c5c664131)
 
 ### Lash Lifting
 
-Description: This process encompasses the actual lash lifting procedure, including the application of lash products and following appropriate techniques.
+- Input: Anemnesis succesful
+- Output: Service done
+- Description: This process encompasses the actual lash lifting procedure, including the application of lash products and following appropriate techniques.
+- Documents: Audiovisual material
+- External information system: Social media
 
 ![Lash Lifting](https://github.com/tomassar/Lashify/assets/71415654/4a425bbd-1e5d-49e3-9a79-e9ad45e36ced)
 
 ### Payment
 
-Description: This process handles the payment transaction for the lash lifting service provided to the customer.
+- Input: Service done
+- Output: Service paid
+- Description: This process handles the payment transaction for the lash lifting service provided to the customer.
+- Documents: Recepit
+- External information systems: Banco Estado, Social Media
 
 ![Payment](https://github.com/tomassar/Lashify/assets/71415654/9da6e592-614d-40db-a863-74a26c2c7193)
 
 ### Record procedure
 
-Description: This process involves documenting and keeping a record of the lash lifting procedure performed on the client. It includes capturing relevant details such as the specific techniques used, products applied, duration of the procedure, and any additional notes or observations. The records serve as a reference for future treatments and enable the lash technician to track the client's history, preferences, and progress. 
+- Input: Service paid
+- Output: Procedure recorded
+- Description: This process involves documenting and keeping a record of the lash lifting procedure performed on the client. It includes capturing relevant details such as the specific techniques used, products applied, duration of the procedure, and any additional notes or observations. The records serve as a reference for future treatments and enable the lash technician to track the client's history, preferences, and progress. 
+- Documents: Procedure recorded
+- External information systems: Google Calendar
 
 ![Record procedure](https://github.com/tomassar/Lashify/assets/71415654/a6400f80-9fbb-4fc6-8d28-1c0ed0baede1)
 
 ### Customer tracking
 
-Description: In this process, the customer is requested to give feedback through answering a form. Also, the stylist gives post lash-lifting instruccions to the client. Special instruccions and considerations are also important. Finally, images of the client happy after the whole process are uploaded to social media, altogether with the feedback they gave.
+- Input: Procedure recorded
+- Description: In this process, the customer is requested to give feedback through answering a form. Also, the stylist gives post lash-lifting instruccions to the client. Special instruccions and considerations are also important. Finally, images of the client happy after the whole process are uploaded to social media, altogether with the feedback they gave.
+- Documents: Complains, suggestions
+- External information systems: Social media
 
 ![Customer tracking](https://github.com/tomassar/Lashify/assets/71415654/3822aed5-451f-4250-a463-684d98992b87)
 
