@@ -29,10 +29,9 @@ By addressing these problems, Lashify aims to streamline processes, improve oper
 
 Lashify's scope includes developing a comprehensive system that covers all key aspects of the lash lifting business processes. It focuses on providing functionalities for customer reception, resource management, appointment scheduling, stylist assignment, anamnesis, lash lifting procedures, and payment handling. The system aims to automate tasks, reduce manual errors, and enhance overall operational efficiency.
 
-![BPMN Sistemas de Información drawio](https://github.com/tomassar/Lashify/assets/71415654/d19ba9cf-aaa4-463e-954f-96ba1af166ac)
-
-
 ## Level 1 - Process Vision
+
+![BPMN Sistemas de Información drawio](https://github.com/tomassar/Lashify/assets/71415654/d19ba9cf-aaa4-463e-954f-96ba1af166ac)
 
 ### Customer Reception
 
