@@ -37,6 +37,10 @@ Description: This process involves gathering relevant information about the cust
 
 Description: This process encompasses the actual lash lifting procedure, including the application of lash products and following appropriate techniques.
 
+### Record procedure
+
+Description: This process involves documenting and keeping a record of the lash lifting procedure performed on the client. It includes capturing relevant details such as the specific techniques used, products applied, duration of the procedure, and any additional notes or observations. The records serve as a reference for future treatments and enable the lash technician to track the client's history, preferences, and progress. 
+
 ### Payment
 
 Description: This process handles the payment transaction for the lash lifting service provided to the customer.
