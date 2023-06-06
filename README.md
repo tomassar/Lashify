@@ -7,6 +7,24 @@ Lashify is a Business Process Management System designed to optimize and automat
 
 The lash lifting industry faces challenges in effectively managing customer reception, resource allocation, appointment scheduling, stylist assignment, anamnesis, lash lifting procedures, and payment processes. Lashify aims to streamline these processes, improve efficiency, and enhance customer experience in this particular industrial context.
 
+The problems to be addressed by our proposal are as follows:
+
+- Inefficient customer reception management: The lack of a centralized system makes it difficult to organize and register customers who come for lash lifting services. This can lead to confusion, delays, and a poor customer experience.
+
+- Inadequate resource allocation: The absence of a mechanism to verify the availability of materials required for lash lifting procedures can result in situations where the necessary supplies are not adequately stocked. This can affect process efficiency and the quality of results.
+
+- Challenging appointment scheduling: Manual scheduling of lash lifting appointments can be a complex task, especially considering customer preferences and stylist availability. This can lead to scheduling conflicts, inefficiencies, and customer dissatisfaction.
+
+- Stylist assignment difficulties: Assigning the right stylist to each lash lifting appointment, considering their expertise and workload, can be challenging without a systematic approach. This may result in suboptimal stylist-client matches and potentially affect the quality of service.
+
+- Incomplete or inaccurate customer information: Gathering relevant information about a customer's medical history, allergies, and preferences prior to the lash lifting procedure is crucial for personalized and safe service delivery. Without a structured system, there may be gaps or errors in collecting and accessing this information.
+
+- Documentation and record-keeping challenges: Recording and maintaining a comprehensive record of the lash lifting procedure performed on a client is essential for future treatments and progress tracking. Without a proper system, important details may be missed or records may be disorganized, leading to inefficiencies and potential errors.
+
+- Payment processing inefficiencies: Handling payment transactions for lash lifting services can be time-consuming and error-prone without a streamlined system. This can result in delays, accounting discrepancies, and difficulties in providing accurate payment information to clients.
+
+By addressing these problems, Lashify aims to streamline processes, improve operational efficiency, enhance customer experience, and facilitate the growth and success of lash lifting businesses.
+
 ### Scope of the Solution
 
 Lashify's scope includes developing a comprehensive system that covers all key aspects of the lash lifting business processes. It focuses on providing functionalities for customer reception, resource management, appointment scheduling, stylist assignment, anamnesis, lash lifting procedures, and payment handling. The system aims to automate tasks, reduce manual errors, and enhance overall operational efficiency.
