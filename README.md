@@ -35,37 +35,40 @@ Lashify's scope includes developing a comprehensive system that covers all key a
 
 ### Customer Reception
 
-Input: Customer input
-Output: Customer request
-Description: This process involves the reception of customers, their registration, and initial assessment of their requirements.
-Documents: Registration form
-External information system: Social media
+- Input: Customer input
+- Output: Customer request
+- Description: This process involves the reception of customers, their registration, and initial assessment of their requirements.
+- Documents: Registration form
+- External information system: Social media
 
 
 ![Customer reception](https://github.com/tomassar/Lashify/assets/71415654/b0147737-fd4e-412e-96e4-a6d768d22b0c)
 
 ### Resource Management
 
-Input: Customer request
-Output: Resources managed
-Description: This process checks the availability of materials required for the lash lifting procedure and ensures they are adequately stocked.
-Documents: Appointment date, Appointment place
-External information system: Google calendar
+- Input: Customer request
+- Output: Resources managed
+- Description: This process checks the availability of materials required for the lash lifting procedure and ensures they are adequately stocked.
+- Documents: List of products required
 
 ![Resource management](https://github.com/tomassar/Lashify/assets/71415654/46229a24-13cf-4de1-b7cb-72fcbedf17a0)
 
 ### Appointment Scheduling
 
-Input: Resources managed
-Output: Shedule appointed
-Description: This process enables the scheduling of lash lifting appointments based on customer preferences and stylist availability.
-Documents: Stylist assigned, instructions for stylist assigned
+- Input: Resources managed
+- Output: Shedule appointed
+- Description: This process enables the scheduling of lash lifting appointments based on customer preferences and stylist availability.
+- Documents: Appointment date, Appointment place
+- External information system: Google calendar
 
 ![Schedule appointment](https://github.com/tomassar/Lashify/assets/71415654/e0b37582-75ef-4da1-ba6b-3676aef63943)
 
 ### Stylist Assignment
 
-Description: This process assigns a stylist to each scheduled lash lifting appointment, considering their expertise and workload.
+- Input: Shedule appointed
+- Output: Stylist assigned
+- Description: This process assigns a stylist to each scheduled lash lifting appointment, considering their expertise and workload.
+- Documents: Stylist assigned, instructions for stylist assigned
 
 ![Stylist assignment](https://github.com/tomassar/Lashify/assets/71415654/3eb86e5c-2394-437f-a8f6-d07d2ffd638f)
 
