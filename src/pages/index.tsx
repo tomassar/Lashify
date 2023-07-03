@@ -14,7 +14,9 @@ export default function Home() {
       </Head>
 
       <main>
-        <div className="h-[8vh] w-full color bg-[#df8080] text-[30px] text-center">Lashify</div>
+        <div className=" flex h-30 w-full color bg-[rgb(87,65,87)] text-[30px] pl-5">
+          <img src="lashify.png" alt="logo" className="w-20 h-20 " />
+        </div>
         <Calendar />
       </main>
     </>
