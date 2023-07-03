@@ -1,59 +1,134 @@
-import { type FC, useState } from 'react';
-import ReactCalendar from 'react-calendar'
-import {add, format} from "date-fns"
-import { INTERVAL, SERVICE_CLOSING_TIME, SERVICE_OPENING_TIME } from '~/constants/config';
+import React from 'react';
+import { formatDate } from '@fullcalendar/core'
+import FullCalendar from '@fullcalendar/react'
+import dayGridPlugin from '@fullcalendar/daygrid'
+import timeGridPlugin from '@fullcalendar/timegrid'
+import interactionPlugin from '@fullcalendar/interaction'
+import { INITIAL_EVENTS, createEventId } from '../utils/event'
 
-interface indexProps {}
+export default class DemoApp extends React.Component {
 
-interface DateType{
-    justDate: Date | null
-    dateTime: Date | null
-}
+  state = {
+    weekendsVisible: true,
+    currentEvents: []
+  }
 
-const CalendarComponent: FC<indexProps> = ({}) => {
-    const [date, setDate] = useState<DateType>({
-        justDate: null,
-        dateTime: null
+  render() {
+    return (
+      <div className='demo-app'>
+        {this.renderSidebar()}
+        <div className='demo-app-main'>
+          <FullCalendar
+            plugins={[dayGridPlugin, timeGridPlugin, interactionPlugin]}
+            headerToolbar={{
+              left: 'prev,next today',
+              center: 'title',
+              right: 'dayGridMonth,timeGridWeek,timeGridDay'
+            }}
+            initialView='dayGridMonth'
+            editable={true}
+            selectable={true}
+            selectMirror={true}
+            dayMaxEvents={true}
+            weekends={this.state.weekendsVisible}
+            initialEvents={INITIAL_EVENTS} // alternatively, use the `events` setting to fetch from a feed
+            select={this.handleDateSelect}
+            eventContent={renderEventContent} // custom render function
+            eventClick={this.handleEventClick}
+            eventsSet={this.handleEvents} // called after events are initialized/added/changed/removed
+            /* you can update a remote database when these fire:
+            eventAdd={function(){}}
+            eventChange={function(){}}
+            eventRemove={function(){}}
+            */
+          />
+        </div>
+      </div>
+    )
+  }
+
+  renderSidebar() {
+    return (
+      <div className='demo-app-sidebar'>
+        <div className='demo-app-sidebar-section'>
+          <h2>Instructions</h2>
+          <ul>
+            <li>Select dates and you will be prompted to create a new event</li>
+            <li>Drag, drop, and resize events</li>
+            <li>Click an event to delete it</li>
+          </ul>
+        </div>
+        <div className='demo-app-sidebar-section'>
+          <label>
+            <input
+              type='checkbox'
+              checked={this.state.weekendsVisible}
+              onChange={this.handleWeekendsToggle}
+            ></input>
+            toggle weekends
+          </label>
+        </div>
+        <div className='demo-app-sidebar-section'>
+          <h2>All Events ({this.state.currentEvents.length})</h2>
+          <ul>
+            {this.state.currentEvents.map(renderSidebarEvent)}
+          </ul>
+        </div>
+      </div>
+    )
+  }
+
+  handleWeekendsToggle = () => {
+    this.setState({
+      weekendsVisible: !this.state.weekendsVisible
     })
+  }
 
-    const getTimes = () => {
-        if (!date.justDate) return
-    
-        const {justDate} = date
-    
-        const beginning = add(justDate, {hours: SERVICE_OPENING_TIME})
-        const end = add(justDate, {hours: SERVICE_CLOSING_TIME})
-        const interval = INTERVAL
-    
-        const times = []
-    
-        for (let i = beginning; i < end; i = add(i, {minutes: interval})) {
-            times.push(i)
-        }
-    
-        return times
+  handleDateSelect = (selectInfo) => {
+    let title = prompt('Please enter a new title for your event')
+    let calendarApi = selectInfo.view.calendar
+
+    calendarApi.unselect() // clear date selection
+
+    if (title) {
+      calendarApi.addEvent({
+        id: createEventId(),
+        title,
+        start: selectInfo.startStr,
+        end: selectInfo.endStr,
+        allDay: selectInfo.allDay
+      })
     }
+  }
 
-    return <div className="h-[92vh] flex flex-col justify-center items-center">
-        {date.justDate ? (
-            <div className="flex gap-4">
-                {getTimes()?.map((time, index) => (
-                    <div key={`time-${index}`} className="rounded-sm bg-gray-100 p-2">
-                        <button type="button" onClick={() => setDate((prev) => ({...prev, dateTime: time}))}>
-                            {format(time, 'kk:mm')}
-                        </button>
-                    </div>
-                ))}
-            </div>
-        ) : (
-        <ReactCalendar 
-            minDate={new Date()} 
-            className="REACT-CALENDAR p-2" 
-            view="month" 
-            onClickDay={(value) => setDate( (prev) => ({...prev, justDate: value}))} 
-            locale="es-CL"
-        />)}
-    </div>;
+  handleEventClick = (clickInfo) => {
+    if (confirm(`Are you sure you want to delete the event '${clickInfo.event.title}'`)) {
+      clickInfo.event.remove()
+    }
+  }
+
+  handleEvents = (events) => {
+    this.setState({
+      currentEvents: events
+    })
+  }
+
 }
 
-export default CalendarComponent;
+function renderEventContent(eventInfo) {
+  return (
+    <>
+      <b>{eventInfo.timeText}</b>
+      <i>{eventInfo.event.title}</i>
+    </>
+  )
+}
+
+function renderSidebarEvent(event) {
+  return (
+    <li key={event.id}>
+      <b>{formatDate(event.start, {year: 'numeric', month: 'short', day: 'numeric'})}</b>
+      <i>{event.title}</i>
+    </li>
+  )
+}
