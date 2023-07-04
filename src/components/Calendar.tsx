@@ -76,7 +76,7 @@ export default class DemoApp extends React.Component {
     })
   }
 
-  handleDateSelect = (selectInfo) => {
+  handleDateSelect = (selectInfo : any) => {
     let title = prompt('Please enter a new title for your event')
     let calendarApi = selectInfo.view.calendar
 
@@ -93,13 +93,13 @@ export default class DemoApp extends React.Component {
     }
   }
 
-  handleEventClick = (clickInfo) => {
+  handleEventClick = (clickInfo : any) => {
     if (confirm(`Are you sure you want to delete the event '${clickInfo.event.title}'`)) {
       clickInfo.event.remove()
     }
   }
 
-  handleEvents = (events) => {
+  handleEvents = (events : any) => {
     this.setState({
       currentEvents: events
     })
@@ -107,7 +107,7 @@ export default class DemoApp extends React.Component {
 
 }
 
-function renderEventContent(eventInfo) {
+function renderEventContent(eventInfo : any) {
   return (
     <>
       <b>{eventInfo.timeText}</b>
@@ -116,7 +116,7 @@ function renderEventContent(eventInfo) {
   )
 }
 
-function renderSidebarEvent(event) {
+function renderSidebarEvent(event : any) {
   return (
     <li key={event.id}>
       <b>{formatDate(event.start, {year: 'numeric', month: 'short', day: 'numeric'})}</b>
